@@ -57,6 +57,7 @@ public class WeChatUtil {
             String result = EntityUtils.toString(entity, "UTF-8");
             js = JSON.parseObject(result);
         }
+        httpGet.releaseConnection();//释放掉链接
         return js;
     }
 
@@ -74,6 +75,7 @@ public class WeChatUtil {
             String result = EntityUtils.toString(entity, "UTF-8");
             js = JSON.parseObject(result);
         }
+        httpPost.releaseConnection();//释放掉链接
         return js;
     }
 

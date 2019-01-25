@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>未绑定页面</title>
+</head>
+<body>
+=======================第二种情况：将微信用户信息与当前系统账号进行绑定=======================================
+<form action="http://localhost.ngrok.xiaomiqiu.cn/WxAuth/callBack" method="post">
+    <input type="text" name="account"/>
+    <input type="text" name="password"/>
+    <input type="hidden" name="openid" th:value="${openid}"/>
+    <input type="submit" value="登录并绑定"/>
+</form>
+</body>
+</html>
